@@ -1,0 +1,101 @@
+/* ===== SEÇÃO TESTE GRÁTIS ===== */
+
+.teste-section {
+    padding: 100px 20px;
+    background: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.teste-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.teste-content h2 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.teste-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    color: #f1f1f1;
+}
+
+.teste-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Ajustando os botões dentro do fundo escuro */
+.teste-actions .btn-primario {
+    background: #fff;
+    color: #000;
+}
+
+.teste-actions .btn-primario:hover {
+    opacity: 0.9;
+}
+
+.teste-actions .btn-link {
+    color: #fff;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer {
+    padding: 30px 20px;
+    background: #111;
+    color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand {
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .teste-section {
+        padding: 70px 20px;
+    }
+
+    .teste-content h2 {
+        font-size: 2rem;
+    }
+
+    .teste-actions {
+        flex-direction: column;
+    }
+
+    .site-footer {
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
