@@ -1,0 +1,268 @@
+/* =========================================
+   VARIÁVEIS DE TEMA (3 cores base)
+   Essas cores serão trocadas pelo painel da cliente
+========================================= */
+:root {
+  --cor-primaria:   #16a34a;  /* botões, navbar, destaques fortes */
+  --cor-secundaria: #065f46;  /* hovers, links, bordas importantes */
+  --cor-destaque:   #bbf7d0;  /* fundos suaves, cards, seções leves */
+
+  --cor-texto:        #111827;
+  --cor-fundo-pagina: #f5f5f5;
+
+  --cor-footer-bg:     #020617;
+  --cor-footer-texto:  #e5e7eb;
+}
+
+/* =========================================
+   RESET GLOBAL
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cor-fundo-pagina);
+  color: var(--cor-texto);
+  line-height: 1.5;
+  padding-top: 70px; /* espaço para a navbar fixa (header) */
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Listas */
+ul {
+  list-style: none;
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Container padrão do site */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Títulos gerais */
+h1,
+h2,
+h3 {
+  color: #020617;
+}
+
+/* =========================================
+   BOTÕES GENÉRICOS
+========================================= */
+
+.btn-primario {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 4px;
+  background: var(--cor-primaria);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.btn-primario:hover {
+  background: var(--cor-secundaria);
+}
+
+.btn-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--cor-secundaria);
+  transition: 0.25s ease;
+}
+
+.btn-link:hover {
+  opacity: 0.7;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+.site-footer {
+  padding: 30px 20px;
+  background: var(--cor-footer-bg);
+  color: var(--cor-footer-texto);
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* centralizado */
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   BOTÃO WHATSAPP FIXO
+========================================= */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 9999;
+
+  width: 65px;
+  height: 65px;
+
+  background: var(--cor-primaria);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn img {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) invert(1); /* deixa o ícone branco */
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.32);
+}
+
+/* Botão de mudar tema (no menu) */
+.btn-toggle-theme {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #e5e5e5;
+  color: #111;
+  font-size: 0.85rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: 0.2s ease;
+}
+
+.btn-toggle-theme:hover {
+  background: #d4d4d4;
+}
+
+/* =========================================
+   RESPONSIVO GERAL
+========================================= */
+
+/* Tablets / telas médias */
+@media (max-width: 900px) {
+  /* HEADER / NAVBAR */
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-menu {
+    gap: 18px;
+  }
+
+  /* PREÇOS: de 3 colunas para 2 */
+  .precos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  /* HEADER / NAVBAR */
+  .navbar {
+    height: auto;
+    padding: 12px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* HOME */
+  .home-hero {
+    padding: 90px 20px;
+  }
+
+  .home-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .home-actions {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* RECURSOS */
+  .recursos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* PREÇOS */
+  .precos-section {
+    padding: 80px 20px;
+  }
+
+  .precos-header h2 {
+    font-size: 2.1rem;
+  }
+
+  .precos-header p {
+    font-size: 1rem;
+  }
+
+  .precos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plano-card {
+    padding: 25px 20px;
+  }
+
+  /* MISSÃO PROPOSTA */
+  .missao-section {
+    padding: 80px 20px;
+  }
+
+  /* TESTE GRÁTIS */
+  .teste-section {
+    padding: 70px 20px;
+  }
+
+  .teste-content h2 {
+    font-size: 2rem;
+  }
+
+  .teste-actions {
+    flex-direction: column;
+  }
+}
