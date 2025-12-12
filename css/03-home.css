@@ -1,261 +1,351 @@
-/* ==========================================================
-   HERO SECTION — versão premium, profissional e chamativa
-   ========================================================== */
+/* ================================
+   HOME / HERO (estilos isolados)
+   ================================ */
 
-.hero {
-    position: relative;
-    width: 100%;
-    padding: 100px 0 60px;
-    background: linear-gradient(135deg, #0B1220 0%, #07101A 45%, #0B1625 100%);
-    overflow: hidden;
-    color: #ffffff;
+/* Seletor duplo para compatibilidade: .hero ou .home-hero */
+.hero,
+.home-hero {
+  position: relative;
+  width: 100%;
+  padding: 100px 0 60px;
+  background: linear-gradient(135deg, #020617 0%, #07101A 45%, #0B1625 100%);
+  color: #fff;
+  overflow: hidden;
+  min-height: 520px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.hero__inner {
-    display: grid;
-    grid-template-columns: 1fr 520px;
-    align-items: center;
-    gap: 40px;
-    position: relative;
+/* Inner container (use sua .container ou esta como fallback) */
+.hero__inner,
+.home-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* --------------------------
-   Conteúdo (lado esquerdo)
---------------------------- */
-
-.hero__content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* Conteúdo esquerdo */
+.hero__content,
+.home-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 3;
 }
 
-.hero__kicker {
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    opacity: 0.7;
-    font-weight: 600;
-    letter-spacing: 1px;
+.hero__kicker,
+.home-hero__kicker {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  opacity: 0.82;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.9);
 }
 
-.hero__title {
-    font-size: 2.8rem;
-    line-height: 1.12;
-    font-weight: 800;
+.hero__title,
+.home-hero__title {
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+  line-height: 1.08;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
 }
 
-.hero__title .hero__strong {
-    color: #25D366;
+.hero__title .hero__strong,
+.home-hero__title .hero__strong {
+  color: #25D366; /* verde WhatsApp / destaque */
+  font-weight: 900;
 }
 
-.hero__title .hero__accent {
-    color: #A1F4C9;
-    font-weight: 700;
+/* Lead opcional */
+.hero__lead,
+.home-hero__lead {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  max-width: 620px;
+  color: rgba(255,255,255,0.92);
 }
 
-.hero__lead {
-    font-size: 1.15rem;
-    line-height: 1.6;
-    opacity: 0.9;
-    max-width: 620px;
-}
-
-/* --------------------------
-   Destaques rápidos
---------------------------- */
-
-.hero__highlights {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* Destaques rápidos (cards pequenos) */
+.hero__highlights,
+.home-hero__highlights {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 520px;
 }
 
 .highlight {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255,255,255,0.07);
-    padding: 12px 16px;
-    border-radius: 12px;
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(255,255,255,0.08);
-    transition: transform .2s ease, background .2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.06);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  transition: transform .18s ease, background .18s ease;
 }
 
-.highlight:hover {
-    transform: translateX(6px);
-    background: rgba(255,255,255,0.12);
+.highlight:hover,
+.highlight:focus-within {
+  transform: translateX(6px);
+  background: rgba(255,255,255,0.11);
 }
 
 .highlight__icon {
-    font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
-/* --------------------------
-   Botões
---------------------------- */
-
-.hero__ctas {
-    display: flex;
-    gap: 14px;
-    margin-top: 10px;
+/* CTAs */
+.hero__ctas,
+.home-hero__ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
 }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 22px;
-    font-weight: 700;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: 0.2s ease;
-    font-size: 1rem;
+.btn,
+.btn-primario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-weight: 800;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  font-size: 1rem;
+  outline: none;
+  border: none;
 }
 
-.btn--primary {
-    background: #25D366;
-    color: #0b1220;
-    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.25);
+/* botão primário (herda sua cor de tema se preferir trocar) */
+.btn--primary,
+.btn-primario {
+  background: #25D366;
+  color: #07211a;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.22);
 }
 
-.btn--primary:hover {
-    background: #1FB058;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.3);
+.btn--primary:hover,
+.btn-primario:hover,
+.btn--primary:focus-visible,
+.btn-primario:focus-visible {
+  background: #1FB058;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(37,211,102,0.32);
 }
 
+/* botão ghost secundário */
 .btn--ghost {
-    color: #d0d0d0;
-    border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.92);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
-.btn--ghost:hover {
-    background: rgba(255,255,255,0.1);
-    border-color: rgba(255,255,255,0.3);
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.22);
 }
 
-/* --------------------------
-   Selo / Trust
---------------------------- */
+/* foco acessível */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(37,211,102,0.14);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
 
-.hero__trust {
-    margin-top: 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    opacity: 0.85;
+/* selo / trust */
+.hero__trust,
+.home-hero__trust {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0.9;
 }
 
 .seal {
-    font-weight: 700;
-    font-size: 0.95rem;
+  font-weight: 800;
+  font-size: 0.95rem;
 }
 
 .micro {
-    font-size: 0.8rem;
-    opacity: 0.7;
+  font-size: 0.85rem;
+  opacity: 0.85;
 }
 
-/* --------------------------
-   Área da imagem da direita
---------------------------- */
-
-.hero__media {
-    position: relative;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+/* Área da imagem (direita) */
+.hero__media,
+.home-hero__media {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+  max-width: 520px;
 }
 
-.hero__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+.hero__image,
+.home-hero__image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  -o-object-fit: cover;
 }
 
-/* --------------------------
-   Overlays da imagem
---------------------------- */
-
-.hero__overlay {
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+/* overlays sobre a imagem */
+.hero__overlay,
+.home-hero__overlay {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 4;
 }
 
 .overlay__pill {
-    background: rgba(37, 211, 102, 0.9);
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: #0b1220;
+  background: rgba(37,211,102,0.95);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #07211a;
 }
 
 .overlay__phone {
-    background: rgba(255,255,255,0.1);
-    padding: 10px 16px;
-    border-radius: 14px;
-    backdrop-filter: blur(6px);
-    font-weight: 700;
+  background: rgba(255,255,255,0.08);
+  padding: 10px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  font-weight: 800;
 }
 
 .overlay__small {
-    display: block;
-    font-size: 0.75rem;
-    opacity: 0.8;
-    margin-top: 2px;
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.85;
+  margin-top: 2px;
 }
 
-/* --------------------------
-   Botão flutuante sobre imagem
---------------------------- */
-
-.hero__fab {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    background: #25D366;
-    color: #0b1220;
-    padding: 10px 16px;
-    border-radius: 999px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
-    box-shadow: 0 12px 35px rgba(37,211,102,0.35);
-    transition: 0.25s ease;
+/* botão flutuante sobre a imagem (FAB) */
+.hero__fab,
+.home-hero__fab {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: #25D366;
+  color: #07211a;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  box-shadow: 0 12px 35px rgba(37,211,102,0.35);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
-.hero__fab:hover {
-    background: #1FB058;
-    transform: translateY(-4px);
-    box-shadow: 0 18px 45px rgba(37,211,102,0.45);
+.hero__fab:hover,
+.home-hero__fab:hover,
+.hero__fab:focus-visible,
+.home-hero__fab:focus-visible {
+  background: #1FB058;
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(37,211,102,0.45);
 }
 
-/* --------------------------
-   Divisor decorativo
---------------------------- */
-
-.hero__divider {
-    position: absolute;
-    bottom: -1px;
-    width: 100%;
-    left: 0;
+/* divisor svg decorativo */
+.hero__divider,
+.home-hero__divider {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  left: 0;
 }
 
 .divider__svg {
-    width: 100%;
-    height: 80px;
-    display: block;
+  width: 100%;
+  height: 80px;
+  display: block;
 }
 
+/* RESPONSIVO (mantido nos mesmos breakpoints do seu global) */
+@media (max-width: 920px) {
+  .hero__inner,
+  .home-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
 
+  /* coloca a imagem acima do conteúdo em telas menores (opcional) */
+  .hero__media,
+  .home-hero__media {
+    order: -1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero__image,
+  .home-hero__image {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero,
+  .home-hero {
+    padding: 60px 0 40px;
+    min-height: auto;
+  }
+
+  .hero__image,
+  .home-hero__image {
+    height: 260px;
+  }
+
+  .hero__title,
+  .home-hero__title {
+    font-size: 1.5rem;
+    line-height: 1.06;
+  }
+
+  .hero__kicker,
+  .home-hero__kicker {
+    font-size: 0.82rem;
+  }
+
+  .btn,
+  .btn-primario {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* reduz animações para usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  .highlight,
+  .btn,
+  .hero__fab {
+    transition: none !important;
+    transform: none !important;
+  }
+}

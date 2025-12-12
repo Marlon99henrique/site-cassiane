@@ -24,18 +24,16 @@
     <!-- ===== HEADER / NAVBAR ===== -->
     <header>
         <nav class="navbar">
-            <div class="navbar-logo">Cassi</div>
+            <div class="navbar-logo">Oryon Consulting</div>
 
             <ul class="navbar-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#recursos"> O que fazemos?</a></li>
-                <li><a href="#missao-proposta">Missão Proposta</a></li>
-                <li><a href="#contratar">Porque nos Contratar</a></li>
-                
+                <li><a href="#recursos"> Serviços</a></li>
+                <li><a href="#missao-proposta">Sobre Nós</a></li>
+                <li><a href="#contratar">Porque nos Contratar</a></li>                
                 <li><a href="#fundadora">A Fundadora</a></li>
-                <li>
-    <input type="color" id="themeColorPicker" class="theme-picker">
-</li>
+                <li><a href="#contato">Contato</a></li>
+              
 
 
             </ul>
@@ -43,66 +41,51 @@
     </header>
 
 
-
-  <!-- ===== SEÇÃO HOME  ===== -->
-<section id="home" class="hero hero--cassiane" aria-label="Home — Atendimento profissional via WhatsApp">
+<!-- ===== SEÇÃO HOME ===== -->
+<section id="home" class="hero hero--cassiane" aria-label="Seção inicial — Consultoria e Atendimento Profissional">
   <div class="hero__inner container">
 
-    <!-- Conteúdo principal (esquerda) -->
+    <!-- Conteúdo principal -->
     <div class="hero__content">
-      <p class="hero__kicker" aria-hidden="true">Atendimento Profissional</p>
+      <p class="hero__kicker">Consultoria e Operação de Atendimento Especializado</p>
 
       <h1 class="hero__title">
-        Atendimento <strong class="hero__strong">Profissional via WhatsApp</strong><br>
-        para <span class="hero__accent">empresas que querem vender mais</span>
+        <strong class="hero__strong">
+          Consultoria estratégica e atendimento profissional que aumentam suas vendas.
+        </strong>
       </h1>
 
-      <p class="hero__lead">
-        Atendimento 100% humano, treinado para converter, reduzir abandono e elevar o LTV dos seus clientes.
-        Transforme o WhatsApp no seu melhor canal de vendas — sem chatbots que afastam clientes.
-      </p>
-
-      <!-- Destaques rápidos — úteis para animações ou microcopy visual -->
-      <ul class="hero__highlights" aria-hidden="false">
-        <li class="highlight">
-          <span class="highlight__icon" aria-hidden="true">💬</span>
-          <span class="highlight__text">Atendimento humano e estratégico</span>
-        </li>
-        <li class="highlight">
-          <span class="highlight__icon" aria-hidden="true">📈</span>
-          <span class="highlight__text">Aumento de conversão (ROI)</span>
-        </li>
-        <li class="highlight">
-          <span class="highlight__icon" aria-hidden="true">🔧</span>
-          <span class="highlight__text">Flexibilidade operacional sem CLT</span>
-        </li>
+      <ul class="hero__highlights">
+        <li class="highlight"><span class="highlight__icon">💬</span> Atendimento humano e estratégico</li>
+        <li class="highlight"><span class="highlight__icon">📈</span> Aumento real de conversão (ROI)</li>
+        <li class="highlight"><span class="highlight__icon">🔧</span> Flexibilidade operacional sem custo CLT</li>
       </ul>
 
-      <!-- CTAs -->
       <div class="hero__ctas">
-        <a class="btn btn--primary" href="https://wa.me/5561981743158?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20os%20planos" target="_blank" rel="noopener noreferrer">
+        <a class="btn btn--primary"
+           href="https://wa.me/5561981743158?text=Olá,%20quero%20saber%20sobre%20os%20planos"
+           target="_blank" rel="noopener noreferrer">
           Fale no WhatsApp
         </a>
 
-        <a class="btn btn--ghost" href="#porque-nos-contratar" aria-label="Ir para por que nos contratar">
-          Por que nos contratar?
+        <a class="btn btn--ghost" href="#porque-nos-contratar">
+          Nossos diferenciais
         </a>
       </div>
 
-      <!-- Trust / selo -->
-      <div class="hero__trust" aria-hidden="true">
+      <div class="hero__trust">
         <span class="seal">✅ Atendimento 100% Humano</span>
-        <span class="micro">+ Atendimento treinado • Scripts de conversão • SLA</span>
+        <span class="micro">Equipe treinada • Scripts de conversão • SLA garantido</span>
       </div>
     </div>
 
-    <!-- Área de mídia (direita) -->
-    <div class="hero__media" role="img" aria-label="Imagem ilustrativa de atendimento via WhatsApp">
-      <!-- imagem enviada por você — substitua o src se subir para CDN -->
-      <img src="img/imagem-home.png" alt="Mulher sorrindo segurando celular com logo do WhatsApp" class="hero__image">
+    <!-- Imagem lado direito -->
+    <div class="hero__media" role="img" aria-label="Atendimento profissional via WhatsApp">
+      <img src="img/imagem-home.png" loading="lazy"
+           alt="Mulher sorrindo segurando celular com WhatsApp"
+           class="hero__image">
 
-      <!-- Overlay para destaque de slogan (facilmente estilizável via CSS) -->
-      <div class="hero__overlay" aria-hidden="true">
+      <div class="hero__overlay">
         <div class="overlay__pill">Atendimento Profissional</div>
         <div class="overlay__phone">
           <strong>WhatsApp</strong>
@@ -110,147 +93,210 @@
         </div>
       </div>
 
-      <!-- CTA flutuante sobre a imagem (pode virar botão sticky em mobile) -->
-      <a class="hero__fab" href="https://wa.me/5561981743158?text=Ol%C3%A1%2C%20quero%20contratar%20o%20servi%C3%A7o" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp agora">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.5 7.5c-.2-.1-1.2-.6-1.4-.6-.2 0-.4-.1-.6.1-.2.2-.8.6-1 1-.2.2-.4.3-.6.3-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.4.3-1.1 1-1.1 2.6s1.1 3 1.2 3.2c.2.2 1.9 3 4.7 4.1 1.1.4 1.8.5 2.4.4.8-.1 2.5-1 2.9-2.3.4-1.3.4-2.4.3-2.6-.1-.3-.3-.4-.6-.6-.3-.2-1-.6-1.2-.6-.2 0-.4 0-.6.1-.2.1-.8.4-1 .4-.2 0-.4 0-.6-.3-.2-.3-.6-.9-.7-1.1-.1-.2 0-.5.1-.7.1-.1.2-.3.4-.5.2-.2.4-.4.4-.8 0-.4-.3-.8-.5-.9z"/></svg>
+      <a class="hero__fab"
+         href="https://wa.me/5561981743158?text=Olá,%20quero%20contratar%20o%20serviço"
+         target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M16.5 7.5c-.2-.1-1.2-.6-1.4-.6-.2 0-.4-.1-.6.1-.2.2-.8.6-1 1-.2.2-.4.3-.6.3-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.4.3-1.1 1-1.1 2.6s1.1 3 1.2 3.2c.2.2 1.9 3 4.7 4.1 1.1.4 1.8.5 2.4.4.8-.1 2.5-1 2.9-2.3.4-1.3.4-2.4.3-2.6-.1-.3-.3-.4-.6-.6-.3-.2-1-.6-1.2-.6-.2 0-.4 0-.6.1-.2.1-.8.4-1 .4-.2 0-.4 0-.6-.3-.2-.3-.6-.9-.7-1.1-.1-.2 0-.5.1-.7.1-.1.2-.3.4-.5.2-.2.4-.4.4-.8 0-.4-.3-.8-.5-.9z"/></svg>
         <span>Fale já</span>
       </a>
     </div>
 
   </div>
 
-  <!-- Forma decorativa / separador (SVG leve) -->
   <div class="hero__divider" aria-hidden="true">
-    <svg viewBox="0 0 1200 100" preserveAspectRatio="none" class="divider__svg"><path d="M0,20 C300,120 900,-40 1200,40 L1200,100 L0,100 Z" fill="#ffffff"/></svg>
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none" class="divider__svg">
+      <path d="M0,20 C300,120 900,-40 1200,40 L1200,100 L0,100 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+</section>
+
+ 
+
+
+
+<!-- ===== SEÇÃO: Serviços / Recursos ===== -->
+<section id="recursos" class="recursos-section" aria-labelledby="recursos-title">
+  <div class="container recursos__inner">
+
+    <!-- Cabeçalho da seção -->
+    <header class="recursos-header">
+      <h2 id="recursos-title" class="recursos-title">
+        Como ajudamos sua empresa a crescer
+      </h2>
+
+      <p class="recursos-subtitle">
+        Operamos seu atendimento de forma profissional e estratégica, garantindo mais vendas,
+        retenção e credibilidade para sua marca  enquanto você foca no crescimento do negócio.
+      </p>
+    </header>
+
+    <!-- GRID DE RECURSOS -->
+    <div class="recursos-grid" role="list">
+
+      <!-- 1 -->
+      <article class="recurso-card" role="listitem">
+        <div class="recurso-icon" aria-hidden="true">
+          💬
+        </div>
+        <h3 class="recurso-title">Atendimento ao Cliente</h3>
+        <p class="recurso-desc">
+          Atendimento humano, empático e treinado para elevar a satisfação e resolver demandas com agilidade.
+        </p>
+      </article>
+
+      <!-- 2 -->
+      <article class="recurso-card" role="listitem">
+        <div class="recurso-icon" aria-hidden="true">
+          🎯
+        </div>
+        <h3 class="recurso-title">Pré-atendimento & Qualificação de Leads</h3>
+        <p class="recurso-desc">
+          Identificamos oportunidades, filtramos interesses e aceleramos o processo de vendas para sua equipe.
+        </p>
+      </article>
+
+      <!-- 3 -->
+      <article class="recurso-card" role="listitem">
+        <div class="recurso-icon" aria-hidden="true">
+          📂
+        </div>
+        <h3 class="recurso-title">Organização e Gestão de Mensagens</h3>
+        <p class="recurso-desc">
+          Estruturamos seu atendimento para respostas rápidas, histórico organizado e processos claros.
+        </p>
+      </article>
+
+      <!-- 4 -->
+      <article class="recurso-card" role="listitem">
+        <div class="recurso-icon" aria-hidden="true">
+          📈
+        </div>
+        <h3 class="recurso-title">Acompanhamento de Vendas</h3>
+        <p class="recurso-desc">
+          Monitoramos oportunidades, follow-ups e conversões para garantir que nenhuma venda seja perdida.
+        </p>
+      </article>
+
+      <!-- 5 -->
+      <article class="recurso-card" role="listitem">
+        <div class="recurso-icon" aria-hidden="true">
+          📅
+        </div>
+        <h3 class="recurso-title">Gestão de Informações & Agenda</h3>
+        <p class="recurso-desc">
+          Organizamos dados, solicitações e agendamentos para otimizar a rotina da sua operação.
+        </p>
+      </article>
+
+      <!-- 6 -->
+      <article class="recurso-card" role="listitem">
+        <div class="recurso-icon" aria-hidden="true">
+          📊
+        </div>
+        <h3 class="recurso-title">Relatórios Semanais ou Quinzenais</h3>
+        <p class="recurso-desc">
+          Entregamos métricas claras e insights para decisões baseadas em dados reais.
+        </p>
+      </article>
+
+    </div>
+
   </div>
 </section>
 
 
 
 
-    <!-- ===== SEÇÃO oque fazemos ===== -->
-    <section id="recursos" class="recursos-section">
-    <div class="container">
-        <header class="recursos-header">
-            <h2>Como ajudamos sua empresa a crescer
-</h2>
-            <p>
-                Oferecemos atendimento profissional via WhatsApp para empresas que 
-                desejam melhorar a experiência do cliente, fortalecer a credibilidade 
-                da marca e aumentar conversões. Cuidamos de todo o atendimento enquanto 
-                você foca no crescimento do seu negócio.
-            </p>
-        </header>
+<!-- ===== SEÇÃO: SOBRE NÓS / MISSÃO ===== -->
+<section id="missao-proposta" class="missao-section" aria-labelledby="missao-title">
+  <div class="container missao__inner">
 
-        <div class="recursos-grid">
-            <article class="recurso-card">
-                <h3>Atendimento ao cliente</h3>
-                <p>
-                    Bots inteligentes que respondem seus clientes a qualquer hora,
-                    sem precisar aumentar o time de suporte.
-                </p>
-            </article>
+    <!-- Cabeçalho -->
+    <header class="missao-header">
+      <h2 id="missao-title" class="missao-title">Nossa missão</h2>
+      <p class="missao-subtitle">
+        Ser o parceiro estratégico das empresas na excelência do atendimento pelo WhatsApp:
+        comunicação 100% humana e orientada à conversão, fidelização e experiência do cliente.
+      </p>
+    </header>
 
-            <article class="recurso-card">
-                <h3>Pré-atendimento e qualificação de leads</h3>
-                <p>
-                    Crie jornadas de atendimento sob medida para o seu negócio, 
-                    sem precisar programar uma linha de código.
-                </p>
-            </article>
+    <!-- Conteúdo: texto à esquerda + imagem / destaques à direita -->
+    <div class="missao-grid" role="region" aria-label="Missão, visão e valores">
 
-            <article class="recurso-card">
-                <h3>Organização e gestão de mensagens</h3>
-                <p>
-                    Conecte facilmente o número da sua empresa e comece a atender
-                    de forma automatizada em poucos minutos.
-                </p>
-            </article>
+      <!-- Coluna Texto -->
+      <div class="missao-body">
+        <p class="missao-text">
+          Transformamos o WhatsApp em um canal de vendas e relacionamento estruturado.
+          Nossos processos combinam treinamento humano, scripts de conversão e controle de qualidade,
+          para que cada interação gere valor mensurável ao seu negócio.
+        </p>
 
-            <article class="recurso-card">
-                <h3>Acompanhamento de vendas</h3>
-                <p>
-                    Acompanhe volume de mensagens, tempo de resposta e resultados
-                    para tomar decisões baseadas em dados.
-                </p>
-            </article>
+        <!-- Missão / Visão / Valores (resumo rápido) -->
+        <ul class="missao-list" aria-hidden="false">
+          <li>
+            <strong>Missão:</strong> Aumentar conversões e retenção por meio de atendimento humano e estratégico.
+          </li>
+          <li>
+            <strong>Visão:</strong> Ser referência nacional em operações de atendimento terceirizado via WhatsApp.
+          </li>
+          <li>
+            <strong>Valores:</strong> Empatia, transparência, responsabilidade e foco em resultado.
+          </li>
+        </ul>
 
-            <article class="recurso-card">
-                <h3>Gestão de informações e agenda</h3>
-                <p>
-                    Acompanhe volume de mensagens, tempo de resposta e resultados
-                    para tomar decisões baseadas em dados.
-                </p>
-            </article>
+        <!-- CTA -->
+        <div class="missao-cta">
+          <a class="btn btn--primary" href="https://wa.me/5561981743158?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20a%20miss%C3%A3o" target="_blank" rel="noopener noreferrer">
+            Converse com a Cassiane
+          </a>
 
-            <article class="recurso-card">
-                <h3>Relatórios semanais ou quinzenais</h3>
-                <p>
-                    Acompanhe volume de mensagens, tempo de resposta e resultados
-                    para tomar decisões baseadas em dados.
-                </p>
-            </article>
-
+          <a class="btn btn--ghost" href="#recursos" aria-label="Ver serviços">
+            Ver serviços
+          </a>
         </div>
+      </div>
+
+      <!-- Coluna Destaques (imagem + estatísticas rápidas) -->
+      <aside class="missao-aside" aria-hidden="false">
+        <!-- Imagem (substitua src pelo arquivo definitivo) -->
+        <figure class="missao-figure" aria-hidden="true">
+          <img src="img/cassiane-fundadora.jpg" alt="Cassiane Abdon — fundadora e consultora de atendimento" loading="lazy">
+        </figure>
+
+        <!-- Pequenos destaques / métricas -->
+        <div class="missao-stats" role="list" aria-label="Principais indicadores">
+          <div class="stat" role="listitem">
+            <div class="stat__value">+95%</div>
+            <div class="stat__label">Satisfação média</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__value">+30%</div>
+            <div class="stat__label">Aumento médio de conversão</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__value">SLA</div>
+            <div class="stat__label">Respostas em até 2 horas</div>
+          </div>
+        </div>
+
+        <!-- Link para a fundadora -->
+        <div class="missao-founder">
+          <a href="#a-fundadora" class="btn btn--link" aria-label="Conheça a fundadora Cassiane Abdon">
+            Conheça a fundadora
+          </a>
+        </div>
+      </aside>
+
     </div>
+  </div>
 </section>
 
-   <!-- ===== SEÇÃO MISSÃO PROPOSTA ===== -->
-<section id="missao-proposta" class="missao-section">
-    <div class="container">
-        <header class="missao-header">
-            <h2>Missão proposta</h2>
-            <p>
-                Ser o parceiro estratégico de nossos clientes, transformando o WhatsApp em uma poderosa
-                ferramenta de vendas e fidelização, garantindo uma comunicação 100% humana, empática
-                e focada em gerar o máximo valor em cada interação.
-            </p>
-        </header>
-
-        <div class="missao-valores">
-            <article class="missao-item">
-                <h3>1. Empatia Genuína</h3>
-                <p>
-                    Colocamos as necessidades do cliente (e do cliente dele) no centro de cada conversa,
-                    construindo relações autênticas, e não apenas transações.
-                </p>
-            </article>
-
-            <article class="missao-item">
-                <h3>2. Excelência Humana</h3>
-                <p>
-                    Buscamos o mais alto padrão de qualidade em comunicação. Nossa meta é ser impecável
-                    no atendimento, demonstrando profissionalismo e calor humano.
-                </p>
-            </article>
-
-            <article class="missao-item">
-                <h3>3. Foco em Conversão (Resultado)</h3>
-                <p>
-                    Todas as interações são estratégicas. Nosso propósito é converter satisfação em vendas
-                    e transformar clientes em defensores da sua marca.
-                </p>
-            </article>
-
-            <article class="missao-item">
-                <h3>4. Agilidade Estratégica</h3>
-                <p>
-                    Entregamos a rapidez que o WhatsApp exige, mas com o cuidado e a 
-                    inteligência de um atendimento planejado, nunca apressado.
-                </p>
-            </article>
-            <article class="missao-item">
-                <h3>5.  Transparência e Confiança</h3>
-                <p>
-             Agimos com total clareza em todas as parcerias, garantindo que nossos 
-             clientes confiem na ética e na eficácia do nosso trabalho.
-                </p>
-            </article>
-    </section>
 
 
-    <!-- Seção: Por Que Nos Contratar? -->
-<section id="porque-nos-contratar" class="porque-section" aria-labelledby="porque-title">
+
+
+    <!--===== Seção: Por Que Nos Contratar?======= -->
+<section id="contratar" class="porque-section" aria-labelledby="porque-title">
   <div class="container">
     <header class="porque-header">
       <h2 id="porque-title">Por Que Nos Contratar?</h2>
@@ -416,18 +462,23 @@
       <h2>Sobre a Fundadora</h2>
 
       <p>
-        Cassi foi criada pela empreendedora <strong>Cassi Abdon</strong>, 
-        apaixonada por tecnologia, inovação e solução de problemas reais. 
-        Desde jovem, ela enxergava a necessidade de ferramentas que ajudassem 
-        pessoas e empresas a simplificar suas rotinas — e transformou essa visão 
-        em realidade.
+    Cassiane Abdon, fundadora da Oryon Consulting, é formada em Administração e possui 
+    experiência prática em Marketing e Atendimento. Atuou em diversas empresas de Santa 
+    Catarina, onde observou de perto desafios reais: equipes pouco estruturadas, 
+    processos desconexos e atendimentos que não entregavam resultado.
       </p>
 
       <p>
-        Com anos de experiência em desenvolvimento e liderança de projetos, ela 
-        decidiu criar uma plataforma simples, poderosa e acessível para todos. 
-        Hoje, sua missão é democratizar a tecnologia e mostrar que qualquer 
-        pessoa pode alcançar grandes resultados com as ferramentas certas.
+       Com uma visão estratégica e moderna, Cassiane criou a Oryon Consulting para elevar
+        o padrão das empresas por meio de consultoria especializada, treinamento de 
+        equipes, reestruturação operacional e atendimento profissional via WhatsApp — 
+        sempre aplicando metodologias atuais e inovação de mercado.
+      </p>
+      <p>
+Sua abordagem combina precisão, inteligência e direção clara. O propósito é simples e 
+poderoso: transformar operações, fortalecer equipes e posicionar negócios em um novo 
+nível de excelência e performance.
+
       </p>
 
       <p class="assinatura">— Cassiane Abdon</p>
@@ -451,45 +502,7 @@
 </a>
 
 
-<script>
-  const picker = document.getElementById("themeColorPicker");
 
-  picker.addEventListener("input", (event) => {
-    const color = event.target.value;
-
-    // Cor primária
-    document.documentElement.style.setProperty("--cor-primaria", color);
-
-    // Cor primária mais escura
-    const darker = shadeColor(color, -20);
-    document.documentElement.style.setProperty("--cor-primaria-escura", darker);
-
-    // Fundo da página (versão bem clara da cor escolhida)
-    const lighter = shadeColor(color, 80);
-    document.documentElement.style.setProperty("--cor-fundo-pagina", lighter);
-  });
-
-  // Função para clarear/escurecer cor
-  function shadeColor(color, percent) {
-    let R = parseInt(color.substring(1,3),16);
-    let G = parseInt(color.substring(3,5),16);
-    let B = parseInt(color.substring(5,7),16);
-
-    R = parseInt(R * (100 + percent) / 100);
-    G = parseInt(G * (100 + percent) / 100);
-    B = parseInt(B * (100 + percent) / 100);
-
-    R = (R < 255)? R : 255;  
-    G = (G < 255)? G : 255;  
-    B = (B < 255)? B : 255;  
-
-    const RR = (R.toString(16).padStart(2, "0"));
-    const GG = (G.toString(16).padStart(2, "0"));
-    const BB = (B.toString(16).padStart(2, "0"));
-
-    return "#" + RR + GG + BB;
-  }
-</script>
 
 
 
